@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="56" viewBox="0 0 34 56">
+  <defs>
+    <linearGradient id="ethereum-a" x1="4.597%" y1="19.23%" y2="100%">
+      <stop offset="0%" stop-color="#43D7A7"/>
+      <stop offset="100%" stop-color="#AD5EF3"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#ethereum-a)" fill-rule="evenodd" opacity=".9">
+    <polygon points="17 41.945 0 31.723 17 56 34 31.723"/>
+    <polygon points="34 28.162 17 0 0 28.162 17 20.587"/>
+    <polygon points="0 29.696 17 22.012 34 29.696 17 40.139"/>
+  </g>
+</svg>

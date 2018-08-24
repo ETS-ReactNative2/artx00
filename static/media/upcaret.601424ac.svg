@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10">
+  <defs>
+    <linearGradient id="upcaret-a" x1="4.597%" y1="19.23%" y2="100%">
+      <stop offset="0%" stop-color="#43D7A7"/>
+      <stop offset="100%" stop-color="#AD5EF3"/>
+    </linearGradient>
+  </defs>
+  <polygon fill="url(#upcaret-a)" fill-rule="evenodd" points="0 39 18 39 9.005 49" transform="matrix(1 0 0 -1 0 49)"/>
+</svg>
