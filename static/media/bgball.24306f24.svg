@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1146" height="473" viewBox="0 0 1146 473">
+  <defs>
+    <linearGradient id="bgball-a" x1="85.504%" x2="20.028%" y1="16.587%" y2="81.549%">
+      <stop offset="0%" stop-color="#0C0528"/>
+      <stop offset="100%" stop-color="#6F49F4"/>
+    </linearGradient>
+    <radialGradient id="bgball-b" cx="18.649%" cy="75.878%" r="75.748%" fx="18.649%" fy="75.878%">
+      <stop offset="0%" stop-color="#0FF"/>
+      <stop offset="100%" stop-color="#0B052D"/>
+    </radialGradient>
+  </defs>
+  <g fill="none" fill-opacity=".8" fill-rule="evenodd">
+    <circle cx="1114.5" cy="315.5" r="31.5" fill="url(#bgball-a)"/>
+    <circle cx="914" cy="17" r="17" fill="url(#bgball-b)"/>
+    <circle cx="844.5" cy="441.5" r="31.5" fill="url(#bgball-b)"/>
+    <circle cx="31.5" cy="163.5" r="31.5" fill="url(#bgball-b)"/>
+    <circle cx="150.5" cy="390.5" r="19.5" fill="url(#bgball-a)"/>
+  </g>
+</svg>
