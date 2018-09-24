@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <defs>
+    <linearGradient id="help-a" x1="4.597%" y1="19.23%" y2="100%">
+      <stop offset="0%" stop-color="#43D7A7"/>
+      <stop offset="100%" stop-color="#AD5EF3"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+    <circle cx="10" cy="10" r="10" stroke="url(#help-a)"/>
+    <text fill="url(#help-a)" font-family="Montserrat-Regular, Montserrat" font-size="14">
+      <tspan x="6.031" y="15">?</tspan>
+    </text>
+  </g>
+</svg>
