@@ -11,29 +11,11 @@ import PropTypes from 'prop-types';
 import ForceGraph3D from './ForceGraph3D';
 import '../../styles/scss/data-viz.scss';
 import data from '../../styles/assets/blocks.json';
+import fomo3d from '../../styles/assets/fomo.json';
 
 class DataViz extends Component {
-    // constructor(props) {
-    //     super(props);
-    
-    //     this.genRandomTree = this.genRandomTree.bind(this);
-    // }
-    
-    // genRandomTree(N) {
-    //     return {
-    //       nodes: [...Array(N).keys()].map(i => ({ id: i })),
-    //         links: [...Array(N).keys()]
-    //       .filter(id => id)
-    //       .map(id => ({
-    //         source: id,
-    //         target: Math.round(Math.random() * (id-1))
-    //       }))
-    //     };
-    //   }
-
     render () {
-        //const GROUPS = 12;
-        //const gData = this.genRandomTree(300);
+        const colors = ["#0021ff","#5d00ff","#a500ff","#ff00b2"];
         return (
             <div>
                 {
@@ -46,6 +28,13 @@ class DataViz extends Component {
                         height={this.props.canvasHeight}
                         backgroundColor='transparent'
                         showNavInfo={false}
+                    />
+                    : this.props.fomo
+                    ? <ForceGraph3D 
+                        graphData={fomo3d}
+                        nodeColor = {() => colors[Math.floor(Math.random() * colors.length)]}
+                        linkWidth={2}
+                        backgroundColor='transparent'
                     />
                     : <ForceGraph3D 
                         graphData={data}
@@ -61,7 +50,8 @@ class DataViz extends Component {
 
 DataViz.propTypes = {
     canvasWidth: PropTypes.number,
-    canvasHeight: PropTypes.number
+    canvasHeight: PropTypes.number,
+    fomo: PropTypes.bool
 };
 
 export default DataViz;

@@ -5,6 +5,7 @@ import PlayPage from './pages/PlayPage';
 import About from './pages/About';
 import PlayerGuide from './pages/PlayerGuide';
 import DataPage from './pages/DataPage';
+import Fomo3DPage from './pages/Fomo3DPage';
 //import logo from './styles/assets/logo.svg';
 import './styles/scss/App.css';
 import './styles/scss/header.scss';
@@ -28,6 +29,7 @@ const App =() => (
                   <li className='nav-item mr-5'><a className='nav-link artx-type-tw' href='https://t.me/joinchat/HimWUVCuDboToxV2Q-kOYQ'>Community</a></li>
                   <li className='nav-item mr-5'><a className='nav-link artx-type-tw' href='/artx00/auction-guide'>Player Guide</a></li>
                   <li className='nav-item mr-5'><a className='nav-link artx-type-tw' href='/artx00/data-viz'>Decentral Art</a></li>
+                  <li className='nav-item mr-5'><a className='nav-link artx-type-tw' href='/artx00/fomo-data'>Fomo3D</a></li>
               </ul>
             </div>
             <Account/>
@@ -37,6 +39,7 @@ const App =() => (
         <Route path={process.env.PUBLIC_URL + '/about'} component={About} />
         <Route path={process.env.PUBLIC_URL + '/auction-guide'} component={PlayerGuide} />
         <Route path={process.env.PUBLIC_URL + '/data-viz'} component={DataPage} />
+        <Route path={process.env.PUBLIC_URL + '/fomo-data'} component={Fomo3DPage} />
       </div>
     </Router>
 );
