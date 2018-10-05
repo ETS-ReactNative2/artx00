@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.8d5d5294.css",
-  "main.css.map": "static/css/main.8d5d5294.css.map",
-  "main.js": "static/js/main.3dcf19a1.js",
-  "main.js.map": "static/js/main.3dcf19a1.js.map",
+  "main.css": "static/css/main.6e118fe5.css",
+  "main.css.map": "static/css/main.6e118fe5.css.map",
+  "main.js": "static/js/main.29fe7017.js",
+  "main.js.map": "static/js/main.29fe7017.js.map",
   "static/media/artxstudio.png": "static/media/artxstudio.68f7ff81.png",
   "static/media/bgball.svg": "static/media/bgball.24306f24.svg",
   "static/media/creatingasmining.png": "static/media/creatingasmining.b33aa8b7.png",
@@ -10,5 +10,6 @@
   "static/media/ethereumgreen.svg": "static/media/ethereumgreen.f69817e1.svg",
   "static/media/ethereumpurple.svg": "static/media/ethereumpurple.04f62580.svg",
   "static/media/hands.png": "static/media/hands.1cdac3d1.png",
+  "static/media/help.svg": "static/media/help.dd5ecc0b.svg",
   "static/media/upcaret.svg": "static/media/upcaret.601424ac.svg"
 }

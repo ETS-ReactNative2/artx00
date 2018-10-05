@@ -106,6 +106,7 @@
   },
   "devDependencies": {
     "gh-pages": "^1.2.0",
+    "json-loader": "^0.5.7",
     "node-sass": "^4.9.2",
     "sass-loader": "^7.0.3"
   }
