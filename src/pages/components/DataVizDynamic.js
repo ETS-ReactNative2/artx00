@@ -1,23 +1,21 @@
-/*
-id: wallet address,
-size: shares,
-color: tbd, maybe ip? maybe some math formula with wallet address?
-
-source: referral address,
-target: referred address
-*/
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ForceGraph3D from './ForceGraph3D';
 import '../../styles/scss/data-viz.scss';
 import data from '../../styles/assets/blocks.json';
 import fomo3d from '../../styles/assets/fomo.json';
+import * as THREE from 'three';
 
-class DataViz extends Component {
+class DataVizDynamic extends Component {
     constructor(props) {
         super(props)
 
+        this.state = {
+            highlightNodes: []
+        };
+
         this.clickToFocus = this.clickToFocus.bind(this);
+        this.CustomObject = this.CustomObject.bind(this);
     };
 
     clickToFocus(node) {
@@ -29,16 +27,50 @@ class DataViz extends Component {
         node, // lookAt ({ x, y, z })
         3000  // ms transition duration
         );
+        this.setState({ highlightNodes: node ? [node] : [] });
+        this.fg.nodeThreeObject(node => {
+            this.CustomObject(node);
+        })
+    }
+
+    CustomObject(node) {
+        const { highlightNodes } = this.state;
+        var obj;
+        var geometry = new THREE.SphereGeometry(Math.random() * 4),
+            material = new THREE.MeshLambertMaterial({
+                color: Math.round(Math.random() * Math.pow(2, 24)),
+                transparent: true,
+                opacity: 0.75
+              });
+        if (highlightNodes.indexOf(node) !== -1) {
+            obj = new THREE.Mesh(geometry, material);
+        } else {
+            obj = new THREE.Mesh(
+                [
+                  new THREE.BoxGeometry(Math.random() * 4, Math.random() * 4, Math.random() * 4),
+                  new THREE.ConeGeometry(Math.random() * 2, Math.random() * 4),
+                  new THREE.CylinderGeometry(Math.random() * 2, Math.random() * 2, Math.random() * 4),
+                  new THREE.DodecahedronGeometry(Math.random() * 2),
+                  new THREE.TorusGeometry(Math.random() * 2, Math.random() * 0.4),
+                  new THREE.TorusKnotGeometry(Math.random() * 2, Math.random() * 0.4)
+                ][Math.floor(Math.random() * 6)],
+                new THREE.MeshLambertMaterial({
+                  color: Math.round(Math.random() * Math.pow(2, 24)),
+                  transparent: true,
+                  opacity: 0.75
+                })
+            )
+        }
+        return obj;
     }
     render () {
-        const colors = ["#0021ff","#5d00ff","#a500ff","#ff00b2"];
         return (
             <div>
                 {
                     this.props.canvasWidth
                     ? <ForceGraph3D 
                         graphData={data}
-                        nodeAutoColorBy="user"
+                        nodeThreeObject={this.CustomObject}
                         linkWidth={2}
                         width={this.props.canvasWidth}
                         height={this.props.canvasHeight}
@@ -49,7 +81,7 @@ class DataViz extends Component {
                     ? <ForceGraph3D
                         ref={el => { this.fg = el; }}
                         graphData={fomo3d}
-                        nodeColor = {() => colors[Math.floor(Math.random() * colors.length)]}
+                        nodeThreeObject={this.CustomObject}
                         linkWidth={2}
                         backgroundColor='transparent'
                         showNavInfo={true}
@@ -58,7 +90,7 @@ class DataViz extends Component {
                     : <ForceGraph3D 
                         ref={el => { this.fg = el; }}
                         graphData={data}
-                        nodeAutoColorBy="user"
+                        nodeThreeObject={this.CustomObject}
                         linkWidth={2}
                         backgroundColor='transparent'
                         showNavInfo={true}
@@ -70,10 +102,10 @@ class DataViz extends Component {
     }
 }
 
-DataViz.propTypes = {
+DataVizDynamic.propTypes = {
     canvasWidth: PropTypes.number,
     canvasHeight: PropTypes.number,
     fomo: PropTypes.bool
 };
 
-export default DataViz;
+export default DataVizDynamic;

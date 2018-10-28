@@ -62,7 +62,7 @@ export default class Popup extends Component {
                 return (
                     <div className='mx-auto'>
                         <p className='artx-type-tw text-center text-warning'>Please login to your Metamask first</p>
-                        <p className='artx-type-et text-center artx-gradient-text mb-4 position-relative'>Bid <i>Genesis</i> shares earlier and earn more dividends! <Info/></p>
+                        <p className='artx-type-et text-center artx-gradient-text mb-4 position-relative'>Bid <i>Genesis</i> shares earlier and earn more dividends! <Info content='Players earn dividends from the auction by bidding and buying shares of Genesis. The price of each share will increase slowly over time. The earlier you bid, the more dividends you earn!'/></p>
                         <div className='text-center mb-4 '>
                             <input className='artx-bid-input artx-type-et text-white mr-2 pl-2 text-center' type='number' id='artxShares' value={this.state.value} onChange={this.handleChange}/>
                             <label className='artx-type-twf text-white' htmlFor='artxShares'>Shares = <span>{this.state.amount}</span><img className='artx-eth-s align-baseline ml-2' src={eth} alt='ethereum icon'/></label>
@@ -106,7 +106,7 @@ export default class Popup extends Component {
                     return (
                         <div className='mx-auto artx-bid-content'>
                             <p className='artx-type-et artx-gradient-text mb-1'>Last step!</p>
-                            <p className='artx-type-et artx-gradient-text mb-3'>If someone refered you, please enter their referral link to receive a 10% ETH bonus!<Info/></p>
+                            <p className='artx-type-et artx-gradient-text mb-3'>If someone refered you, please enter their referral link to receive a 10% ETH bonus!<Info content='You can use other people’s  referral link. Both of you will receive 10%  of the referral’s purchase as bonus.'/></p>
                             <div className='mb-3'>
                                 <label className='artx-type-et text-white' htmlFor='artxRLFI'>Referral Link</label>
                                 <input className='artx-bid-input-s artx-type-st text-white mx-2' id='artxRLFI' aria-describedby='artxRFLIO'/>
@@ -123,7 +123,7 @@ export default class Popup extends Component {
                         <h3 className='text-center artx-type-ths artx-gradient-text mb-2'>Congratulations!</h3>
                         <p className='text-center artx-type-st text-white mb-1'>Your bid has been submitted to blockchain.</p>
                         <p className='text-center artx-type-st text-white amb-8'>Check <b>Personal Account</b> to see your status anytime!</p>
-                        <p className='text-center artx-type-st artx-gradient-text mb-1 position-relative'>Here is your <b>Personal Referral Link</b>.<Info/></p>
+                        <p className='text-center artx-type-st artx-gradient-text mb-1 position-relative'>Here is your <b>Personal Referral Link</b>.<Info content='You can use your personal referral link to recruit other people to the auction. Both of you will receive 10%  of the referral’s purchase as bonus.'/></p>
                         <p className='text-center artx-type-st artx-gradient-text mb-1'>Share it with friends and win 10% of their bids!</p>
                         <p className='text-center artx-type-st artx-gradient-text'>The more you refer, the more you earn!</p>
                         <div className='d-flex justify-content-center amb-9'>

@@ -43,4 +43,22 @@
 
 .artx-help-icon {
     bottom: 1em;
+    background-color: transparent;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    span {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 1rem;
+        border-radius: 5px;
+        z-index: 10;
+        width: 360px;
+        left: 0;
+        bottom: 24px;
+        display: none;
+    }
+    &:hover span {
+        display: inline-block;
+    }
 }

@@ -7,6 +7,10 @@
     @include font(0.75, 1);
 }
 
+.artx-type-ftn {
+    @include font(0.875, 1.125);
+}
+
 .artx-type-st {
     @include font(1, 1.25);
 }

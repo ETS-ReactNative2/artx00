@@ -42,8 +42,8 @@ export default class Above extends Component {
                         <DataViz canvasWidth={800} canvasHeight={600}/>
                         <div className='position-absolute artx-intro w-100 my-5'>
                             <p className='text-right artx-gradient-text artx-type-tw'><i>Genesis</i>, the first blockchain-based artwork is now on auction!</p>
-                            <p className='artx-explaination ml-auto amy-8 text-right text-white artx-type-st'>Lot 001 <i>Genesis</i><br/><i>Genesis</i> is a crowdsourced and decentralized blockchain-based data visualization artwork that evolves in real-time. Your wallet address, bid amount and bid time will serve as data input for the creation<br/>of <i>Genesis</i>.</p>
-                            <p className='artx-type-st text-right text-white artx-explaination ml-auto'>
+                            <p className='artx-explaination ml-auto amy-8 text-right text-white artx-type-ftn'>Lot 001 <i>Genesis</i><br/><i>Genesis</i> is a crowdsourced and decentralized blockchain-based data visualization artwork that evolves in real-time. Your wallet address, bid amount and bid time will serve as data input for the creation<br/>of <i>Genesis</i>.</p>
+                            <p className='artx-type-ftn text-right text-white artx-explaination ml-auto'>
                                 <i>Genesis</i> is co-owned by all Decentralists, who gain profits by trading shares of the work. The Decentralist that most accurately appraises the auction price will win the big award. Learn more about how to win money and this historically significant artwork, <i>Genesis</i>, here. 
                             </p>
                             <p className='text-right artx-gradient-text artx-type-fs mb-3'><img className='align-middle mr-3' src={upcaret} alt='' aria-hidden='true'/>{currentPrice}<img className='align-baseline ml-3' src={eth} alt='ethereum icon'/></p>
@@ -53,7 +53,7 @@ export default class Above extends Component {
                     
                 </div>
                 <div>
-                    <p className='artx-type-tw artx-gradient-text position-relative'>Auction Hardcap Remaining <Info/></p>
+                    <p className='artx-type-tw artx-gradient-text position-relative'>Auction Hardcap Remaining <Info content='test'/></p>
                     <p className='artx-type-tw artx-gradient-text mb-4'>{diffAppraisal}<img className='artx-eth-s align-top ml-2' src={eth} alt='ethereum icon'/></p>
                     
                     <div className='artx-jackpot-status'>

@@ -1,9 +1,9 @@
 import React from 'react';
-import DataViz from './components/DataViz';
+import DataVizDynamic from './components/DataVizDynamic';
 
 const DataPage = () => (
     <div className='artx-gradient-bg'>
-        <DataViz/>
+        <DataVizDynamic/>
     </div>
 );
 export default DataPage;
