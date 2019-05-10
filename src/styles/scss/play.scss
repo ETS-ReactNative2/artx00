@@ -44,11 +44,13 @@
 .artx-help-icon {
     bottom: 1em;
     background-color: transparent;
-    color: white;
     border: 0;
     cursor: pointer;
-    span {
+    &:hover::after {
+        content: 'This is the difference between the hardcap and the current price. It will serve as the timer for the auction. The hardcap starts high and decreases over time. The auction ends once the accumulated sales of Genesis shares reach or exceed the hardcap.';
         color: white;
+        text-align: left;
+        position: absolute;
         background-color: rgba(0, 0, 0, 0.6);
         padding: 1rem;
         border-radius: 5px;
@@ -56,9 +58,5 @@
         width: 360px;
         left: 0;
         bottom: 24px;
-        display: none;
-    }
-    &:hover span {
-        display: inline-block;
     }
 }
